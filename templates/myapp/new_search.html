@@ -2,8 +2,8 @@
 
 {% block content %}
 <h2 style="text-align: center">{{ search | title }}</h2>
+    <div class="row">
 {% for post in final_posting %}
-    <div class="flex-box row">
         <div class="col s4">
             <div class="card">
                 <div class="card-image">
@@ -13,10 +13,10 @@
                     <p> {{post.0}} </p>
                 </div>
                 <div class="card-action">
-                    <a href="/">View listing: Price {{post.2}}</a>
+                    <a href="{{post.1}}">View listing: Price {{post.2}}</a>
                 </div>
             </div>
         </div>
-    </div>
 {% endfor %}
+    </div>
 {% endblock content %}
